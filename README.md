@@ -39,7 +39,7 @@ https://docs.google.com/spreadsheets/d/1FFD4hkWfKEBErbQXALjPiCrfzlCEAbY84vJBwvv3
 
 ## ER Diagram
 
-<iframe src="https://cacoo.com/diagrams/pbi9JPXqpxzQaSq3/view?si=F2479&w=400&h=500" width="402" height="530" frameborder="0" scrolling="no"></iframe>
+[ERDiagram](public/ERDiagram.png)
 
 https://cacoo.com/diagrams/pbi9JPXqpxzQaSq3/F2479
 
