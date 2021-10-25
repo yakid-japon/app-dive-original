@@ -39,13 +39,11 @@ https://docs.google.com/spreadsheets/d/1FFD4hkWfKEBErbQXALjPiCrfzlCEAbY84vJBwvv3
 
 ## ER Diagram
 
-[ERDiagram](public/ERDiagram.png)
 
 https://cacoo.com/diagrams/pbi9JPXqpxzQaSq3/F2479
 
 ## Screen Transition Diagram
 
-![TRANSITION DIAGRAM](TR.png)
 
 https://cacoo.com/diagrams/pbi9JPXqpxzQaSq3/CE008
 
