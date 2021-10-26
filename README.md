@@ -45,20 +45,20 @@ https://docs.google.com/spreadsheets/d/1Zze-SVzioNiTsf0eVvzX5VmFg_IVhuzl74ifbvyF
 
 ## ER Diagram
 
-![ER Diagram](https://user-images.githubusercontent.com/65257248/138780521-b5ac2608-38d3-4628-96c5-28a42dc90522.PNG)
+![ER Diagram](https://user-images.githubusercontent.com/65257248/138856841-6f2bf5b5-55f6-404e-945f-d0b37c74a644.PNG)
 
 https://cacoo.com/diagrams/pbi9JPXqpxzQaSq3/F2479
 
 ## Screen Transition Diagram
 
-![Transition Diagram](https://user-images.githubusercontent.com/65257248/138780671-27cd0bb2-6132-4989-a6ef-d15aef416662.PNG)
+![Transition Diagram](https://user-images.githubusercontent.com/65257248/138856975-6e0c06ea-18aa-4e19-ac5a-ae42aec1df5b.PNG)
 
 https://cacoo.com/diagrams/pbi9JPXqpxzQaSq3/CE008
 
 
 ## Wireframe
 
-![Wireframe](https://user-images.githubusercontent.com/65257248/138780750-9ac3e75f-664e-4a80-b945-f5d385b4e937.PNG)
+![Wireframe](https://user-images.githubusercontent.com/65257248/138857129-1cafa189-e447-40e0-9cc0-48e064be3b9b.PNG)
 
 https://cacoo.com/diagrams/pbi9JPXqpxzQaSq3/7D2EE
 
