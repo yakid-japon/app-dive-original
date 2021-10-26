@@ -10,7 +10,7 @@ Things you may want to cover:
 ## Employmemnt Term Technology
 
 - Devise
-- Fonction de message
+- Fonction de commentaire
 
 ## Technologies outside the curriculum
 
@@ -45,20 +45,20 @@ https://docs.google.com/spreadsheets/d/1Zze-SVzioNiTsf0eVvzX5VmFg_IVhuzl74ifbvyF
 
 ## ER Diagram
 
-![ER Diagram](https://user-images.githubusercontent.com/65257248/138926131-9d63566f-8e72-420e-b147-bc5c23c49d11.PNG)
+![ER Diagram](https://user-images.githubusercontent.com/65257248/138964548-2ca316b1-d9ce-438d-bfa3-7f9783ca8c05.PNG)
 
 https://cacoo.com/diagrams/pbi9JPXqpxzQaSq3/F2479
 
 ## Screen Transition Diagram
 
-![Transition Diagram](https://user-images.githubusercontent.com/65257248/138926316-b93f8f72-8b1a-498b-9501-abef89c65991.PNG)
+![Transition Diagram](https://user-images.githubusercontent.com/65257248/138964638-bd91cd6b-8ef6-4b53-a6d1-5ee92944df92.PNG)
 
 https://cacoo.com/diagrams/pbi9JPXqpxzQaSq3/CE008
 
 
 ## Wireframe
 
-![Wireframe](https://user-images.githubusercontent.com/65257248/138857129-1cafa189-e447-40e0-9cc0-48e064be3b9b.PNG)
+![Wireframe](https://user-images.githubusercontent.com/65257248/138964731-3f5745de-ef7b-4568-8d81-45ce4f305cac.PNG)
 
 https://cacoo.com/diagrams/pbi9JPXqpxzQaSq3/7D2EE
 
