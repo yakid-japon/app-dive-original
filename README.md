@@ -45,13 +45,13 @@ https://docs.google.com/spreadsheets/d/1Zze-SVzioNiTsf0eVvzX5VmFg_IVhuzl74ifbvyF
 
 ## ER Diagram
 
-![ER Diagram](https://user-images.githubusercontent.com/65257248/138856841-6f2bf5b5-55f6-404e-945f-d0b37c74a644.PNG)
+![ER Diagram](https://user-images.githubusercontent.com/65257248/138926131-9d63566f-8e72-420e-b147-bc5c23c49d11.PNG)
 
 https://cacoo.com/diagrams/pbi9JPXqpxzQaSq3/F2479
 
 ## Screen Transition Diagram
 
-![Transition Diagram](https://user-images.githubusercontent.com/65257248/138856975-6e0c06ea-18aa-4e19-ac5a-ae42aec1df5b.PNG)
+![Transition Diagram](https://user-images.githubusercontent.com/65257248/138926316-b93f8f72-8b1a-498b-9501-abef89c65991.PNG)
 
 https://cacoo.com/diagrams/pbi9JPXqpxzQaSq3/CE008
 
