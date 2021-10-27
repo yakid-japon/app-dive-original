@@ -45,7 +45,7 @@ https://docs.google.com/spreadsheets/d/1Zze-SVzioNiTsf0eVvzX5VmFg_IVhuzl74ifbvyF
 
 ## ER Diagram
 
-![ER Diagram](https://user-images.githubusercontent.com/65257248/138964548-2ca316b1-d9ce-438d-bfa3-7f9783ca8c05.PNG)
+![ER Diagram](https://user-images.githubusercontent.com/65257248/139020144-8bc58e11-2b01-4822-ac79-29ff5743a2b2.PNG)
 
 https://cacoo.com/diagrams/pbi9JPXqpxzQaSq3/F2479
 
