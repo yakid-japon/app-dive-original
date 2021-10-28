@@ -1,32 +1,32 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Prestations</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name prest</th>
-      <th>Price</th>
-      <th>Hospital</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @prestations.each do |prestation| 
-      prest=prestation.hospital%>
-      <tr>
-        <td><%= prestation.name_prest %></td>
-        <td><%= prestation.price %></td>
-        <td><%= prest.hospi_name %></td>
-        <td><%= link_to 'Show', prestation %></td>
-        <td><%= link_to 'Edit', edit_prestation_path(prestation) %></td>
-        <td><%= link_to 'Destroy', prestation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<div class="container">
+      <h1>Les Liste des prestations disponibles</h1>
+      <table class="table table-dark">
+        <thead>
+        <tr>
+        <th>Name prest</th>
+        <th>Price</th>
+        <th>Hospital</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+        </thead>
+        <tbody>
+        <% @prestations.each do |prestation| 
+          prest=prestation.hospital%>
+          <tr>
+            <td><%= prestation.name_prest %></td>
+            <td><%= prestation.price %></td>
+            <td><%= prest.hospi_name %></td>
+            <td><%= link_to 'Show', prestation, class: "badge bg-success" %></td>
+            <td><%= link_to 'Edit', edit_prestation_path(prestation), class: "badge bg-warning"  %></td>
+            <td><%= link_to 'Destroy', prestation, method: :delete, data: { confirm: 'Are you sure?' }, class: "badge bg-danger" %></td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
 
 <br>
 
-<%= link_to 'New Prestation', new_prestation_path %>
+<%= link_to 'New Prestation', new_prestation_path , class: "badge bg-primary"%>
