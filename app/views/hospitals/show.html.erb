@@ -1,0 +1,55 @@
+
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Hospi name:</strong>
+  <%= @hospital.hospi_name %>
+</p>
+
+<p>
+  <strong>Hospi adresse:</strong>
+  <%= @hospital.hospi_adresse %>
+</p>
+
+
+  <% if @hospital.prestations %>
+   <strong>  Nos Prestation </strong>
+    <% @hospital.prestations.each do |value| %>
+      <div style="border-radius:5px; box-shadow: 6px 6px 6px blue; ">
+        <ul>
+        <li style="color:green"><%= value.name_prest %></li>
+        <li style="color:red"><%= value.price %> FCFA</li>
+        <button id="pay-btn"
+          data-transaction-amount= <%= value.price %>
+          data-transaction-description="Paiement de prestation">Payer </button>
+          <br/>
+          <%= form_with(model: @payment, local: true ,url: payments_path ) do |form| %>
+            <% if user_signed_in? %>
+            <%= form.hidden_field :user_id, value: current_user.id %>
+            <%end%>
+            <%= form.hidden_field :prestation_id, value: value.id %>
+           <button type="submit">Valider la transaction</button> 
+          <%end%>
+          | 
+          <a href="../recu.webp" download="recu.webp">Demander un QR de paiement</a>
+        </ul>
+      </div>
+    <%end%>
+  <%end%>
+
+  
+<% if user_signed_in? %>
+    <% if current_user.role? %>
+      <%= link_to 'Edit Hospital', edit_hospital_path(@hospital) %> |
+    <%end%>
+<%end%>
+
+
+<%= link_to 'Back', hospitals_path %>
+
+<script type="text/javascript">
+   FedaPay.init('#pay-btn', { public_key: 'pk_live_4Wbtx5-rDoIQMhe2aVb4ZxmE' });
+</script>
+
+<script src="../sample.js"></script>

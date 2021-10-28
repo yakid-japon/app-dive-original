@@ -14,14 +14,15 @@ Things you may want to cover:
 
 ## Technologies outside the curriculum
 
+- Vue.Js
 - Cloudinary
 - Fedapay Api (payment system)
 
 ## Execution Procedure
 
 ```bash
-$ git clone git@github.com:GyllDoko/dive-original-application.git
-$ cd dive-original-application
+$ git clone https://github.com/jean-Baptiste2020/dive-original-app.git
+$ cd dive-original-app
 $ bundle install
 $ rails db:create
 $ rails db:migrate

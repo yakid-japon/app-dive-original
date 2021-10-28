@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name prest:</strong>
+  <%= @prestation.name_prest %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @prestation.price %>
+</p>
+
+<p>
+  <strong>Hospital:</strong>
+  <%= @prestation.hospital.hospi_name %>
+</p>
+
+<%= link_to 'Edit', edit_prestation_path(@prestation) %> |
+<%= link_to 'Back', prestations_path %>

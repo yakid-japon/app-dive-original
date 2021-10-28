@@ -1,0 +1,14 @@
+<div class="container-fluid mt-5">
+    <div class="row justify-content-center align-content-center">
+        <div class="col-md-4 text-center">
+            <h2 id="title" class="font-weight-bold"><%=I18n.t('views.messages.profile')%></h2>                                   
+        </div>
+    </div>
+    <div class="row justify-content-center align-content-center">
+        <div class="col-md-4 text-center pt-3">
+            <p> <%= current_user.name %> </p>     
+            <p> <%= current_user.email %> </p>  
+            <p class="text-center mt-4"><%= link_to I18n.t('views.messages.updateProfile') , edit_user_registration_path, class: 'update-button' %>                           
+        </div>
+    </div>
+</div>
