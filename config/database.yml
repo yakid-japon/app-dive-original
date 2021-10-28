@@ -81,5 +81,3 @@ test:
 production:
   <<: *default
   database: dive-original-app_production
-  username: dive-original-app
-  password: <%= ENV['DIVE-ORIGINAL-APP_DATABASE_PASSWORD'] %>
