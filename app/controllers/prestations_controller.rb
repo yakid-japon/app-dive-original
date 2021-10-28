@@ -21,15 +21,19 @@ class PrestationsController < ApplicationController
 
   # POST /prestations or /prestations.json
   def create
-    @prestation = Prestation.new(prestation_params)
+    if user_signed_in?
+      if current_user.role?
+        @prestation = Prestation.new(prestation_params)
 
-    respond_to do |format|
-      if @prestation.save
-        format.html { redirect_to @prestation, notice: "Prestation was successfully created." }
-        format.json { render :show, status: :created, location: @prestation }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @prestation.errors, status: :unprocessable_entity }
+        respond_to do |format|
+          if @prestation.save
+            format.html { redirect_to @prestation, notice: "Prestation was successfully created." }
+            format.json { render :show, status: :created, location: @prestation }
+          else
+            format.html { render :new, status: :unprocessable_entity }
+            format.json { render json: @prestation.errors, status: :unprocessable_entity }
+          end
+        end
       end
     end
   end

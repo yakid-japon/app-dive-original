@@ -1,9 +1,65 @@
 <div class="container-fluid pt-5 pb-2"> 
 <p id="notice"><%= notice %></p>
 
+<!--====== SERVICES PART START ======-->
+            <section id="features" class="services-area pt-120">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10">
+                            <div class="section-title text-center pb-40">
+                                <div class="line m-auto"></div>
+                                    Chabla healthGATE une Startup bien pensée dont le seule but est une prise en charge rapide des patients sans perdre le temps dans les rangs de la caisse.
+                                    <span>De cet faite cette StartUp met à votre disposition 24h/24h, Une gamme de service suivants:</span>
+                            </div>
+                            <!-- section title -->
+                        </div>
+                    </div>
+                    <!-- row -->
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4 col-md-7 col-sm-8">
+                            <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+                                <div class="services-content mt-30">
+                                    <p class="text">
+                                        Chabla healthGATE met à votre disposition un système de paiement rapide des frais de soins dans des hôpitaux disponible.
+                                    </p>
+                                    <!-- <a class="more" href="#">Lire Plus<i class="lni lni-chevron-right"></i></a>-->
+                                </div>
+                            </div>
+                            <!-- single services -->
+                        </div>
+                        <div class="col-lg-4 col-md-7 col-sm-8">
+                            <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                                <div class="services-content mt-30">
+                                    <p class="text">
+                                        Chabla healthGATE permet de localiser un hôpital de préferance en fontion de l'adresse.
+                                    </p>
+                                    <!-- <a class="more" href="#">Lire Plus<i class="lni lni-chevron-right"></i></a>-->
+                                </div>
+                            </div>
+                            <!-- single services -->
+                        </div>
+                        <div class="col-lg-4 col-md-7 col-sm-8">
+                            <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
+                                <div class="services-content mt-30">
+                                    <p class="text">
+                                        Chabla healthGATE Vous réserve d'énormes surprises dans les versions à venir
+                                    </p>
+                                    <!-- <a class="more" href="#">Lire Plus<i class="lni lni-chevron-right"></i></a>-->
+                                </div>
+                            </div>
+                            <!-- single services -->
+                        </div>
+                    </div>
+                    <!-- row -->
+                </div>
+                <!-- container -->
+            </section>
+
+            <!--====== SERVICES PART ENDS ======-->
+
 <%= form_tag hospitals_path, method: 'get' do %>
   <p>
-    <%= text_field_tag :search, params[:search] %>
+    <%= text_field_tag :search, params[:search], placeholder: "Recherche rapide ici" %>
     <%= submit_tag "Search", :hospi_name => nil %>
   </p>
 <% end %>

@@ -1,3 +1,5 @@
+<br/><br/>
+<section id="features" class="services-area pt-120">
 <%= form_with(model: prestation, local: true) do |form| %>
   <% if prestation.errors.any? %>
     <div id="error_explanation">
@@ -13,19 +15,21 @@
 
   <div class="field">
     <%= form.label :name_prest %>
-    <%= form.text_field :name_prest %>
+    <%= form.text_field :name_prest, placeholder: "prestation name" %>
   </div>
 
   <div class="field">
     <%= form.label :price %>
-    <%= form.number_field :price %>
+    <%= form.number_field :price, placeholder: "montant" %>
   </div>
 
   <div class="field">
-  <%= form.collection_select :hospital_id, Hospital.order(:hospi_name),:id,:hospi_name, include_blank: true %>
+  <%= form.label :choix %>
+  <%= form.collection_select :hospital_id, Hospital.order(:hospi_name),:id,:hospi_name, include_blank: true, placeholder: "choix d'hôpital" %>
   </div>
 
   <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
+</section>

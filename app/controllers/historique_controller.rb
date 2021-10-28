@@ -1,7 +1,9 @@
 class HistoriqueController < ApplicationController
   def index
-    @payments = Payment.where(user_id: current_user.id).all
+    if user_signed_in?
+      @payments = Payment.where(user_id: current_user.id).all
 
-    @comment = Comment.new
+      @comment = Comment.new
+    end
   end
 end

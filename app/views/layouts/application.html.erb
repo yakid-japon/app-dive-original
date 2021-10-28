@@ -11,55 +11,30 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg" id="myNav" style=" background-color:blue;">
-      <div class="container-fluid">
-          <%= link_to "CHABLA HealthGate", root_path, class: "navbar-brand" %>
-          <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="navbar-collapse collapse pr-md-5" id="navbarsExample05">
-            <ul class="navbar-nav pl-md-5 ml-auto pr-5">
-              <li class="nav-item pl-md-5">
-                <%= link_to I18n.t('views.messages.home'), root_path, class: "nav-link" %>
-              </li>
-              <% if user_signed_in? %>
-                <li class="nav-item pl-md-5">
-                  <%= link_to  I18n.t('views.messages.profile') , user_path(current_user.id), class: 'nav-link' %>
-                </li>
-                <li class="nav-item pl-md-5">
-                <a class="nav-link" href="/historique"><%=I18n.t('views.messages.historique')%></a>
-                </li>
-                <% if current_user.role? %>
-                  <li class="nav-item pl-md-5">
-                    <a class="nav-link" href="/admin"><%=I18n.t('views.messages.admin')%></a>
-                  </li>
-                  <li class="nav-item pl-md-5">
-                  <%= link_to  I18n.t('views.messages.prestations') , prestations_path, class: 'nav-link' %>
-                  </li>
-                <%end%>
-                <li class="nav-item pl-md-5">
-                  <%= link_to I18n.t('views.messages.logout'), destroy_user_session_path, method: :delete, class: "nav-link" %>
-                </li>
-              <% else %>
-                <li class="nav-item pl-md-5">                 
-                  <%= link_to I18n.t('views.messages.signIn') , new_user_session_path, class:"nav-link" %>
-                </li>
-                <li class="nav-item pl-md-5">
-                  <%= link_to I18n.t('views.messages.signUp'), new_user_registration_path, class:"nav-link"%>
-                </li>
-                <li class="nav-item pl-md-5">
-                  <%= link_to I18n.t('views.messages.guestUser'), users_guest_sign_in_path, method: :post, class:"nav-link"%>
-                </li>
-                <li class="nav-item pl-md-5">
-                  <%= link_to I18n.t('views.messages.guestAdmin'), users_guest_admin_sign_in_path, method: :post, class:"nav-link"%>
-                </li>
-              <%end%>             
-            </ul> 
-            <div class="navbar-nav ml-auto pr-5">
-            </div>          
-          </div>
+    <header id="header" class="fixed-top">
+      <div class="container d-flex align-items-center">
+
+        <h1 class="logo me-auto"><a href="index.html">Chabla healthGATE</a></h1>
+        <nav id="navbar" class="navbar order-last order-lg-0">
+          <ul>
+            <li><%= link_to I18n.t('views.messages.home'), root_path, class: "nav-link scrollto" %></li>
+            <% if user_signed_in? %>  
+                <li><%= link_to I18n.t('views.messages.profile'), user_path(current_user.id), class: "nav-link scrollto " %></li>
+                <li><a class="nav-link scrollto" href="/historique"><%=I18n.t('views.messages.historique')%></a></li>
+              <% if current_user.role? %>
+                <li> <a class="nav-link scrollto" href="/admin"><%=I18n.t('views.messages.admin')%></a></li>
+                <li><%= link_to  I18n.t('views.messages.prestations') , prestations_path, class: "nav-link scrollto" %></li>
+              <% end %>
+                <li><%= link_to I18n.t('views.messages.logout'), destroy_user_session_path, method: :delete, class: "nav-link scrollto"%></li>
+            <% else %>
+                <li><%= link_to I18n.t('views.messages.signIn') , new_user_session_path, class:"nav-link scrollto" %></li>
+                <li><%= link_to I18n.t('views.messages.signUp'), new_user_registration_path, class:"nav-link scrollto"%></li>
+                <li><%= link_to I18n.t('views.messages.guestUser'), users_guest_sign_in_path, method: :post, class:"nav-link scrollto"%></li>
+                <li><%= link_to I18n.t('views.messages.guestAdmin'), users_guest_admin_sign_in_path, method: :post, class:"nav-link scrollto"%></li>
+            <% end %>
+          </ul>  
       </div>
-    </nav>
+    </header>
     <%= yield %>
     <div class="container-fluid" style="
 

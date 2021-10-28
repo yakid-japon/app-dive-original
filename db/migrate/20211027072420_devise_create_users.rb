@@ -16,7 +16,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
   
         #App own attributes
         t.string :name, null:false, default: ""
-        t.string :role, null:false, default: false
+        t.boolean :role, null:false, default: false
   
   
         ## Trackable

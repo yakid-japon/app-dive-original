@@ -1,11 +1,13 @@
 class CommentsController < ApplicationController
     def create
+      if user_signed_in?
           @comment = Comment.new(comment_params)
           if @comment.save
             redirect_to "/historique"
           else
             redirect_to "/historique"
           end
+      end
     end
 
 private

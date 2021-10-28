@@ -17,7 +17,7 @@ class HospitalsController < ApplicationController
 
   # GET /hospitals/new
   def new
-  
+    @hospital = Hospital.new
   end
 
   # GET /hospitals/1/edit
@@ -26,38 +26,50 @@ class HospitalsController < ApplicationController
 
   # POST /hospitals or /hospitals.json
   def create
-    @hospital = Hospital.new(hospital_params)
+    if user_signed_in?
+      if current_user.role?
+        @hospital = Hospital.new(hospital_params)
 
-    respond_to do |format|
-      if @hospital.save
-        format.html { redirect_to @hospital, notice: "Hospital was successfully created." }
-        format.json { render :show, status: :created, location: @hospital }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @hospital.errors, status: :unprocessable_entity }
+        respond_to do |format|
+          if @hospital.save
+            format.html { redirect_to @hospital, notice: "Hospital was successfully created." }
+            format.json { render :show, status: :created, location: @hospital }
+          else
+            format.html { render :new, status: :unprocessable_entity }
+            format.json { render json: @hospital.errors, status: :unprocessable_entity }
+          end
+        end
       end
     end
   end
 
   # PATCH/PUT /hospitals/1 or /hospitals/1.json
   def update
-    respond_to do |format|
-      if @hospital.update(hospital_params)
-        format.html { redirect_to @hospital, notice: "Hospital was successfully updated." }
-        format.json { render :show, status: :ok, location: @hospital }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @hospital.errors, status: :unprocessable_entity }
+    if user_signed_in?
+      if current_user.role?
+        respond_to do |format|
+          if @hospital.update(hospital_params)
+            format.html { redirect_to @hospital, notice: "Hospital was successfully updated." }
+            format.json { render :show, status: :ok, location: @hospital }
+          else
+            format.html { render :edit, status: :unprocessable_entity }
+            format.json { render json: @hospital.errors, status: :unprocessable_entity }
+          end
+        end
       end
     end
   end
 
   # DELETE /hospitals/1 or /hospitals/1.json
   def destroy
-    @hospital.destroy
-    respond_to do |format|
-      format.html { redirect_to hospitals_url, notice: "Hospital was successfully destroyed." }
-      format.json { head :no_content }
+    if user_signed_in?
+      if current_user.role?
+        @hospital.destroy
+        respond_to do |format|
+          format.html { redirect_to hospitals_url, notice: "Hospital was successfully destroyed." }
+          format.json { head :no_content }
+        end
+      end
     end
   end
 

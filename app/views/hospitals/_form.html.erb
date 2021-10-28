@@ -1,3 +1,5 @@
+<br/><br/>
+<section id="features" class="services-area pt-120">
 <%= form_with(model: hospital, local: true) do |form| %>
   <% if hospital.errors.any? %>
     <div id="error_explanation">
@@ -13,15 +15,16 @@
 
   <div class="field">
     <%= form.label :hospi_name %>
-    <%= form.text_field :hospi_name %>
+    <%= form.text_field :hospi_name, placeholder: "Nom d'hôpital" %>
   </div>
 
   <div class="field">
     <%= form.label :hospi_adresse %>
-    <%= form.text_field :hospi_adresse %>
+    <%= form.text_field :hospi_adresse, placeholder: "Adresse d'hôpital" %>
   </div>
 
   <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
+</section>
