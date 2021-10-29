@@ -220,7 +220,7 @@ fr:
   views:
     messages:
        contentAcceuil1: Chabla healthGATE une Startup bien pensée dont le seul objectif est une prise en charge rapide des patients sans perdre de temps dans les rangs de la caisse.
-       contentAcceuil2: Chabla heathGATE vous présente une gamme de services suivantes 24h/24h
+       contentAcceuil2: Bienvenue à Chabla healthGATE
        service1: Chabla healthGATE met à votre disposition un système de paiement rapide des frais de soins dans des hôpitaux disponible.
        service2: Chabla healthGATE permet de localiser un hôpital de préferance en fontion de l'adresse.
        service3: Chabla healthGATE Vous réserve d'énormes surprises dans les versions à venir
@@ -282,5 +282,6 @@ fr:
       updateComment: Modifier ce commentaire
       addHopital: 'ajouter un hopital'
       addPrestation: 'ajouter une prestation'
+      start: 'Commencer'
     form:
       search: Rechercher 

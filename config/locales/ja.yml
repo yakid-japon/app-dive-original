@@ -212,7 +212,7 @@ ja:
       par: 旅
       date: 日付
       contentAcceuil1: Chabla healthGATEは、ファンドのランクで時間を無駄にすることなく迅速な患者ケアを唯一の目標とする、よく考えられたスタートアップです。
-      contentAcceuil2: その結果、このスタートアップは1日24時間、次のさまざまなサービスを提供します。
+      contentAcceuil2: ChablahealthGATEへようこそ
       service1: Chabla healthGATEは、利用可能な病院の医療費の迅速な支払いシステムを提供します。
       service2: Chabla healthGATEを使用すると、住所に基づいて希望する病院を見つけることができます。
       service3: Chabla healthGATEは、今後のバージョンであなたのために大きな驚きを持っています
@@ -268,5 +268,6 @@ ja:
       updateComment: コメントを更新
       addHopital: 病院を追加する
       addPrestation: 'サービスを追加する'
+      start: 'はじめに'
     form:
       search: 検索中

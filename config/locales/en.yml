@@ -222,7 +222,7 @@ en:
        par: Journey
        date: Date
        contentAcceuil1: Chabla healthGATE a well-thought-out Startup whose sole goal is rapid patient care without wasting time in the ranks of the fund.
-       contentAcceuil2: Chabla heathGATE presents a range of following services to you 24 hours a day
+       contentAcceuil2: Welcome to Chabla healthGATE
        service1: Chabla healthGATE provides you with a fast payment system for healthcare costs in hospitals available.
        service2: Chabla healthGATE allows you to locate a preferred hospital based on the address.
        service3: Chabla healthGATE has huge surprises in store for you in the upcoming versions
@@ -268,7 +268,7 @@ en:
        favoritesMovies: Favorites Movies
        noFavorites: You don't yave favorites movies yet.
     buttons:
-      watchYet: Watch Yet
+      watchYet: Show
       watchAgain: Watch again
       subscribe: Get Subscriptions
       update: Update
@@ -278,5 +278,6 @@ en:
       updateComment: Update comment
       addHopital: 'add a hospital'
       addPrestation: 'add a service'
+      start: 'Get Started'
     form:
       search: Search Now

@@ -1,19 +1,17 @@
-<div class="container-fluid pt-5 pb-2"> 
-<p id="notice"><%= notice %></p>
 
+<div class="container-fluid pt-5 pb-2"> 
+<section id="hero" class="d-flex align-items-center">
+<div class="container">
+  <span id="notice"><%= notice %></span>
+  <h1><%= I18n.t('views.messages.contentAcceuil2') %></h1>
+  <h2 style="color: black"> <%= I18n.t('views.messages.contentAcceuil1') %></h2>
+  <a href="#hospital" class="btn-get-started scrollto"><%= I18n.t('views.buttons.start') %></a>
+</div>
+</section><!-- End Hero -->
 <!--====== SERVICES PART START ======-->
             <section id="features" class="services-area pt-120">
                 <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-10">
-                            <div class="section-title text-center pb-40">
-                                <div class="line m-auto"></div>
-                                <%= I18n.t('views.messages.contentAcceuil1') %>
-                                   <div> <span><%= I18n.t('views.messages.contentAcceuil2') %></span> </div>
-                            </div>
-                            <!-- section title -->
-                        </div>
-                    </div>
+                    
                     <!-- row -->
                     <div class="row justify-content-center">
                         <div class="col-lg-4 col-md-7 col-sm-8">
@@ -58,13 +56,13 @@
             <!--====== SERVICES PART ENDS ======-->
 
 <%= form_tag hospitals_path, method: 'get' do %>
-  <p>
+  <p id="hospital">
     <%= text_field_tag :search, params[:search], placeholder: "Recherche rapide ici" %>
     <%= submit_tag "Search", :hospi_name => nil %>
   </p>
 <% end %>
 
-    <div class="container">
+    <div class="container" >
       <h1><%= I18n.t('views.messages.titleA') %></h1>
       <table class="table table-dark">
         <thead>
@@ -79,11 +77,11 @@
           <tr>
             <td><%= hospital.hospi_name %></td>
             <td><%= hospital.hospi_adresse %></td>
-            <td><%= link_to I18n.t('views.buttons.watchYet'), hospital, class: "badge bg-success" %></td>
+            <td><%= link_to I18n.t('views.buttons.watchYet'), hospital, class: "badge bg-success", style:"font-size: 12px" %></td>
             <% if user_signed_in? %>
               <% if current_user.role? %>
-                <td><%= link_to I18n.t('views.buttons.edit'), edit_hospital_path(hospital), class: "badge bg-warning"  %></td>
-                <td><%= link_to I18n.t('views.buttons.delete'), hospital, method: :delete, data: { confirm: 'Are you sure?' }, class: "badge bg-danger"  %></td>
+                <td><%= link_to I18n.t('views.buttons.edit'), edit_hospital_path(hospital), class: "badge bg-warning", style:"font-size: 12px"  %></td>
+                <td><%= link_to I18n.t('views.buttons.delete'), hospital, method: :delete, data: { confirm: 'Are you sure?' }, class: "badge bg-danger", style:"font-size: 12px"  %></td>
               <%end%>
             <%end%>
           </tr>
@@ -95,7 +93,7 @@
 <br>
 <% if user_signed_in? %>
     <% if current_user.role? %>
-       <%= link_to I18n.t('views.buttons.addHopital'), new_hospital_path, class: "badge bg-primary"  %>
+       <%= link_to I18n.t('views.buttons.addHopital'), new_hospital_path, class: "badge bg-primary", style:"font-size: 12px"  %>
     <%end%>
 <%end%>
 
@@ -111,9 +109,9 @@
                     <div class="row justify-content-center">
                     <% @comments.each do |comment| 
                       user= User.find(comment.user_id)%>
-                        <div class="col-lg-4 col-md-7 col-sm-8">
+                        <div class="col-lg-4 col-md-7 col-sm-8" >
                             <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
-                                <div class="services-content mt-30">
+                                <div class="services-content mt-30" >
                                     <p class="text">
                                      <%= comment.opinion %>
                                     </p>
