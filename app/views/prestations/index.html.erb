@@ -3,13 +3,13 @@
 <p id="notice"><%= notice %></p>
 
 <div class="container">
-      <h1>Les Liste des prestations disponibles</h1>
+      <h1><%= I18n.t('views.messages.prest') %></h1>
       <table class="table table-dark">
         <thead>
         <tr>
-        <th>Name prest</th>
-        <th>Price</th>
-        <th>Hospital</th>
+        <th><%= I18n.t('views.messages.nameA') %></th>
+        <th><%= I18n.t('views.messages.price') %></th>
+        <th><%= I18n.t('views.messages.hospi') %></th>
         <th colspan="3"></th>
       </tr>
         </thead>
@@ -20,9 +20,9 @@
             <td><%= prestation.name_prest %></td>
             <td><%= prestation.price %></td>
             <td><%= prest.hospi_name %></td>
-            <td><%= link_to 'Show', prestation, class: "badge bg-success" %></td>
-            <td><%= link_to 'Edit', edit_prestation_path(prestation), class: "badge bg-warning"  %></td>
-            <td><%= link_to 'Destroy', prestation, method: :delete, data: { confirm: 'Are you sure?' }, class: "badge bg-danger" %></td>
+            <td><%= link_to I18n.t('views.buttons.watchYet'), prestation, class: "badge bg-success" %></td>
+            <td><%= link_to I18n.t('views.buttons.edit'), edit_prestation_path(prestation), class: "badge bg-warning"  %></td>
+            <td><%= link_to I18n.t('views.buttons.delete'), prestation, method: :delete, data: { confirm: 'Are you sure?' }, class: "badge bg-danger" %></td>
           </tr>
         <% end %>
         </tbody>
@@ -31,4 +31,4 @@
 
 <br>
 
-<%= link_to 'New Prestation', new_prestation_path , class: "badge bg-primary"%></section>
+<%= link_to I18n.t('views.buttons.addPrestation'), new_prestation_path , class: "badge bg-primary"%></section>

@@ -205,6 +205,21 @@ ja:
     pm: 午後
   views:
     messages:
+      price: 価格
+      hospi: 病院
+      prest: 利用可能なサービスのリスト
+      avis: 意見
+      par: 旅
+      date: 日付
+      contentAcceuil1: Chabla healthGATEは、ファンドのランクで時間を無駄にすることなく迅速な患者ケアを唯一の目標とする、よく考えられたスタートアップです。
+      contentAcceuil2: その結果、このスタートアップは1日24時間、次のさまざまなサービスを提供します。
+      service1: Chabla healthGATEは、利用可能な病院の医療費の迅速な支払いシステムを提供します。
+      service2: Chabla healthGATEを使用すると、住所に基づいて希望する病院を見つけることができます。
+      service3: Chabla healthGATEは、今後のバージョンであなたのために大きな驚きを持っています
+      titleA: 利用可能な病院のリスト
+      nameA: 名前
+      histo: ユーザー履歴
+      adresseA: 住所
       prestations: 利点
       historique: 歴史的
       profile: プロフィール
@@ -251,5 +266,7 @@ ja:
       delete: '削除'
       addComment: 新しいコメントを追加
       updateComment: コメントを更新
+      addHopital: 病院を追加する
+      addPrestation: 'サービスを追加する'
     form:
       search: 検索中

@@ -215,7 +215,21 @@ en:
     pm: pm
   views:
     messages:
-       content1: Chabla healthGATE a well-thought-out Startup whose sole goal is rapid patient care without wasting time in the ranks of the fund.
+       price: Price
+       hospi: Hospital
+       prest: List of available services
+       avis: Opinion
+       par: Journey
+       date: Date
+       contentAcceuil1: Chabla healthGATE a well-thought-out Startup whose sole goal is rapid patient care without wasting time in the ranks of the fund.
+       contentAcceuil2: Chabla heathGATE presents a range of following services to you 24 hours a day
+       service1: Chabla healthGATE provides you with a fast payment system for healthcare costs in hospitals available.
+       service2: Chabla healthGATE allows you to locate a preferred hospital based on the address.
+       service3: Chabla healthGATE has huge surprises in store for you in the upcoming versions
+       titleA: List of available hospitals
+       histo: User history
+       nameA: Name
+       adresseA: Adress
        prestations: Benefits
        historique: historical
        profile: Profile
@@ -262,5 +276,7 @@ en:
       delete: 'Delete'
       addComment: Add new comment
       updateComment: Update comment
+      addHopital: 'add a hospital'
+      addPrestation: 'add a service'
     form:
       search: Search Now

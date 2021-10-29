@@ -8,8 +8,8 @@
                         <div class="col-lg-10">
                             <div class="section-title text-center pb-40">
                                 <div class="line m-auto"></div>
-                                    Chabla healthGATE une Startup bien pensée dont le seule but est une prise en charge rapide des patients sans perdre le temps dans les rangs de la caisse.
-                                    <span>De cet faite cette StartUp met à votre disposition 24h/24h, Une gamme de service suivants:</span>
+                                <%= I18n.t('views.messages.contentAcceuil1') %>
+                                   <div> <span><%= I18n.t('views.messages.contentAcceuil2') %></span> </div>
                             </div>
                             <!-- section title -->
                         </div>
@@ -20,7 +20,7 @@
                             <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
                                 <div class="services-content mt-30">
                                     <p class="text">
-                                        Chabla healthGATE met à votre disposition un système de paiement rapide des frais de soins dans des hôpitaux disponible.
+                                     <%= I18n.t('views.messages.service1') %>
                                     </p>
                                     <!-- <a class="more" href="#">Lire Plus<i class="lni lni-chevron-right"></i></a>-->
                                 </div>
@@ -31,7 +31,7 @@
                             <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
                                 <div class="services-content mt-30">
                                     <p class="text">
-                                        Chabla healthGATE permet de localiser un hôpital de préferance en fontion de l'adresse.
+                                    <%= I18n.t('views.messages.service2') %>
                                     </p>
                                     <!-- <a class="more" href="#">Lire Plus<i class="lni lni-chevron-right"></i></a>-->
                                 </div>
@@ -42,7 +42,7 @@
                             <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
                                 <div class="services-content mt-30">
                                     <p class="text">
-                                        Chabla healthGATE Vous réserve d'énormes surprises dans les versions à venir
+                                      <%= I18n.t('views.messages.service3') %>
                                     </p>
                                     <!-- <a class="more" href="#">Lire Plus<i class="lni lni-chevron-right"></i></a>-->
                                 </div>
@@ -65,12 +65,12 @@
 <% end %>
 
     <div class="container">
-      <h1>Les Liste des hopitaux disponibles</h1>
+      <h1><%= I18n.t('views.messages.titleA') %></h1>
       <table class="table table-dark">
         <thead>
         <tr>
-          <th>Hospi name</th>
-          <th>Hospi adresse</th>
+          <th><%= I18n.t('views.messages.nameA') %></th>
+          <th><%= I18n.t('views.messages.adresseA') %></th>
           <th colspan="3"></th>
          </tr>
         </thead>
@@ -79,11 +79,11 @@
           <tr>
             <td><%= hospital.hospi_name %></td>
             <td><%= hospital.hospi_adresse %></td>
-            <td><%= link_to 'Show', hospital, class: "badge bg-success" %></td>
+            <td><%= link_to I18n.t('views.buttons.watchYet'), hospital, class: "badge bg-success" %></td>
             <% if user_signed_in? %>
               <% if current_user.role? %>
-                <td><%= link_to 'Edit', edit_hospital_path(hospital), class: "badge bg-warning"  %></td>
-                <td><%= link_to 'Destroy', hospital, method: :delete, data: { confirm: 'Are you sure?' }, class: "badge bg-danger"  %></td>
+                <td><%= link_to I18n.t('views.buttons.edit'), edit_hospital_path(hospital), class: "badge bg-warning"  %></td>
+                <td><%= link_to I18n.t('views.buttons.delete'), hospital, method: :delete, data: { confirm: 'Are you sure?' }, class: "badge bg-danger"  %></td>
               <%end%>
             <%end%>
           </tr>
@@ -95,7 +95,7 @@
 <br>
 <% if user_signed_in? %>
     <% if current_user.role? %>
-       <%= link_to 'New Hospital', new_hospital_path, class: "badge bg-primary"  %>
+       <%= link_to I18n.t('views.buttons.addHopital'), new_hospital_path, class: "badge bg-primary"  %>
     <%end%>
 <%end%>
 
