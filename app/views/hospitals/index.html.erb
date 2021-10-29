@@ -99,4 +99,37 @@
     <%end%>
 <%end%>
 
+
+
+
+
+
+<!--====== Comment PART START ======-->
+            <section id="features" class="services-area pt-120">
+                <div class="container">
+                    <!-- row -->
+                    <div class="row justify-content-center">
+                    <% @comments.each do |comment| 
+                      user= User.find(comment.user_id)%>
+                        <div class="col-lg-4 col-md-7 col-sm-8">
+                            <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+                                <div class="services-content mt-30">
+                                    <p class="text">
+                                     <%= comment.opinion %>
+                                    </p>
+                                    <a class="more" href="#"> <%= user.name %> <i class="lni lni-chevron-right"></i></a>
+                                </div>
+                            </div>
+                            <!-- single services -->
+                        </div>
+                    <% end %>   
+                    </div>
+                    <%= paginate @comments %>
+                    <!-- row -->
+                </div>
+                <!-- container -->
+            </section>
+
+            <!--====== Comment PART ENDS ======-->
+
 </div>

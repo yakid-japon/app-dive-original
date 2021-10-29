@@ -3,7 +3,7 @@ class CommentsController < ApplicationController
       if user_signed_in?
           @comment = Comment.new(comment_params)
           if @comment.save
-            redirect_to "/historique"
+            redirect_to "/historique", notice: "Comment was successfully created."
           else
             redirect_to "/historique"
           end

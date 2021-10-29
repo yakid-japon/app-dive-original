@@ -4,6 +4,8 @@ class HospitalsController < ApplicationController
   # GET /hospitals or /hospitals.json
   def index
     @hospitals = Hospital.search(params[:search])
+
+    @comments = Comment.all.page(params[:page]).per(3)
   end
 
   def search
