@@ -1,66 +1,71 @@
+
 <br/><br/>
 <br/><br/>
-<section id="features" class="services-area pt-120">
+<br/><br/>
+
+<div class="wrapperJ">
 <p id="notice"><%= notice %></p>
-<div id="app">
-    <div class="container">
+  <h2><%= I18n.t('views.messages.histo') %></h2>
+  <div class="tableJ">
 
-    <h2><%= I18n.t('views.messages.histo') %></h2>
-    <table class="table">
-    <thead>
-        <tr>
-        <th><%= I18n.t('views.messages.par') %></th>
-        <th><%= I18n.t('views.messages.date') %></th>
-        <th><%= I18n.t('views.messages.avis') %></th>
-        </tr>
-    </thead>
-    <tbody>
-        <% @payments.each do |value| 
-            pay= Prestation.find(value.prestation_id) 
-            host = pay.hospital%>
-                <tr>
-                    <td>
-                    <%= host.hospi_name %>
-                    </td>
-                    <td>
-                    <%= host.created_at %>
-                    </td>
-                    <td>
-                        <div id="html">
-                          <button data-toggle="modal" data-target="#formulaire" class="btn btn-primary">Commentaire</button>
-                        </div>
-                        <div class="modal fade" id="formulaire">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h4 class="modal-title">Votre avis sur la prestation :</h4>              
-                                    <button type="button" class="close" data-dismiss="modal">
-                                    <span>&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body row">
-                                    <%= form_with(model: @comment, local: true ,url: comments_path ) do |form| %>
-                                        <div class="form-group">
-                                            <%= form.label :opinion, for: "comment", class: "form-control-label" %>
-                                            <%= form.text_area :opinion, class: "form-control", id: "comment", placeholder: "Votre Commentaire" %>
-                                        </div>
-                                            <%= form.hidden_field :user_id, value: current_user.id %>
-                                            <%= form.hidden_field :user_id, value: current_user.id %>
-                                            <%= form.hidden_field :prestation_id, value: value.prestation_id %>
-                                    <button type="submit">Valider la transaction</button> 
-                                    <%end%>
-                               </div>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-        <% end %>
-    </tbody>
-    </table>
+    <div class="rowJ headerJ blueJ">
+      <div class="cellJ">
+      <%= I18n.t('views.messages.par') %>
+      </div>
+      <div class="cellJ">
+      <%= I18n.t('views.messages.date') %>
+      </div>
+      <div class="cellJ">
+      <%= I18n.t('views.messages.avis') %>
+      </div>
     </div>
+
+<% @payments.each do |value| 
+        pay= Prestation.find(value.prestation_id) 
+        host = pay.hospital%>
+    <div class="rowJ">
+      <div class="cellJ" data-title="Username">
+      <%= host.hospi_name %>
+      </div>
+      <div class="cellJ" data-title="Password">
+      <%= host.created_at %>
+      </div>
+      <div class="cellJ" data-title="Active">
+      <button data-toggle="modal" data-target="#formulaire" class="btn btn-primary">Commentaire</button>
+      
+      <div class="modal fade" id="formulaire">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h4 class="modal-title">Votre avis sur la prestation :</h4>              
+                  <button type="button" class="close" data-dismiss="modal">
+                  <span>&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body row">
+                  <%= form_with(model: @comment, local: true ,url: comments_path ) do |form| %>
+                      <div class="form-group">
+                          <%= form.label :opinion, for: "comment", class: "form-control-label" %>
+                          <%= form.text_area :opinion, class: "form-control", id: "comment", placeholder: "Votre Commentaire" %>
+                      </div>
+                          <%= form.hidden_field :user_id, value: current_user.id %>
+                          <%= form.hidden_field :user_id, value: current_user.id %>
+                          <%= form.hidden_field :prestation_id, value: value.prestation_id %>
+                  <button type="submit">Point de vue</button> 
+                  <%end%>
+              </div>
+          </div>
+      </div>
+  </div>
+      
+      
+      </div>
+    </div>
+<%end%>
+
+
+  </div>
+
 </div>
-</section>
+
 <script src="sample.js"></script>
-
-
-

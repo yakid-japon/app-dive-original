@@ -1,41 +1,82 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>OriginsApp</title>
+    <title>ChablaHEALTH</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/hospital.css" rel="stylesheet">
+  <link href="assets/css/table.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
-    <link href="/style.css" rel="stylesheet">
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script src="https://cdn.fedapay.com/checkout.js?v=1.1.7"></script>
   </head>
 
   <body>
-    <header id="header" class="fixed-top">
-      <div class="container d-flex align-items-center">
-
-        <h1 class="logo me-auto"><a href="#">Chabla healthGATE</a></h1>
-        <nav id="navbar" class="navbar order-last order-lg-0">
-          <ul>
-            <li><%= link_to I18n.t('views.messages.home'), root_path, class: "nav-link scrollto" %></li>
-            <% if user_signed_in? %>  
-                <li><%= link_to I18n.t('views.messages.profile'), user_path(current_user.id), class: "nav-link scrollto " %></li>
-                <li><a class="nav-link scrollto" href="/historique"><%=I18n.t('views.messages.historique')%></a></li>
-              <% if current_user.role? %>
-                <li> <a class="nav-link scrollto" href="/admin"><%=I18n.t('views.messages.admin')%></a></li>
-                <li><%= link_to  I18n.t('views.messages.prestations') , prestations_path, class: "nav-link scrollto" %></li>
-              <% end %>
-                <li><%= link_to I18n.t('views.messages.logout'), destroy_user_session_path, method: :delete, class: "nav-link scrollto"%></li>
-            <% else %>
-                <li><%= link_to I18n.t('views.messages.signIn') , new_user_session_path, class:"nav-link scrollto" %></li>
-                <li><%= link_to I18n.t('views.messages.signUp'), new_user_registration_path, class:"nav-link scrollto"%></li>
-                <li><%= link_to I18n.t('views.messages.guestUser'), users_guest_sign_in_path, method: :post, class:"nav-link scrollto"%></li>
-                <li><%= link_to I18n.t('views.messages.guestAdmin'), users_guest_admin_sign_in_path, method: :post, class:"nav-link scrollto"%></li>
-            <% end %>
-          </ul>  
+  <!-- ======= Top Bar ======= -->
+  <div id="topbar" class="d-flex align-items-center fixed-top">
+    <div class="container d-flex justify-content-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope"></i> <a href="mailto:contact@example.com">Chablamedia@gmail.com</a>
+        <i class="bi bi-phone"></i> +229 69 25 10 18
       </div>
-    </header>
+      <div class="d-none d-lg-flex social-links align-items-center">
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="#">ChablaHEALTH</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+        <li><%= link_to I18n.t('views.messages.home'), root_path, class: "nav-link scrollto active" %></li>
+        <li><%= link_to I18n.t('views.messages.hospi'), "/#services", class: "nav-link scrollto" %></li>
+        <% if user_signed_in? %>  
+            <li><%= link_to I18n.t('views.messages.profile'), user_path(current_user.id), class: "nav-link scrollto " %></li>
+            <li><a class="nav-link scrollto" href="/historique"><%=I18n.t('views.messages.historique')%></a></li>
+          <% if current_user.role? %>
+            <li> <a class="nav-link scrollto" href="/admin"><%=I18n.t('views.messages.admin')%></a></li>
+          <% end %>
+        <% else %>
+            <li><%= link_to I18n.t('views.messages.guestUser'), users_guest_sign_in_path, method: :post, class:"nav-link scrollto"%></li>
+            <li><%= link_to I18n.t('views.messages.guestAdmin'), users_guest_admin_sign_in_path, method: :post, class:"nav-link scrollto"%></li>
+        <% end %>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+      <% if user_signed_in? %>
+      <%= link_to I18n.t('views.messages.logout'), destroy_user_session_path, method: :delete, class:"appointment-btn scrollto" %>
+      <% else %>
+      <%= link_to I18n.t('views.messages.signIn') , new_user_session_path, class:"appointment-btn scrollto" %>
+      <%end%>
+    </div>
+  </header>
+
     <%= yield %>
     <div class="container-fluid" style="
 

@@ -217,15 +217,48 @@ en:
     messages:
        price: Price
        hospi: Hospital
+       hospis: Hospitals
        prest: List of available services
+       docteurA: ChablaHEALTH provides you with the best doctors in the world at your service 24 hours a day
        avis: Opinion
        par: Journey
        date: Date
-       contentAcceuil1: Chabla healthGATE a well-thought-out Startup whose sole goal is rapid patient care without wasting time in the ranks of the fund.
-       contentAcceuil2: Welcome to Chabla healthGATE
-       service1: Chabla healthGATE provides you with a fast payment system for healthcare costs in hospitals available.
-       service2: Chabla healthGATE allows you to locate a preferred hospital based on the address.
-       service3: Chabla healthGATE has huge surprises in store for you in the upcoming versions
+       presentation: I am really happy that this project has seen the light of day and that it can serve people in need.
+       profess1: Chief doctor
+       gal: Gallery
+       galPre: We present to you some photos of patient care taken by well-equipped hospitals of our startUP.
+       contact: Contact
+       local: Our location on the world map.
+       comp1: Very dynamic, rigorous.
+       profess2: Anesthetist
+       comp2: Very dynamic, rigorous, friendly.
+       profess3: Cardiology
+       comp3: Fast, tender, sociable.
+       profess4: Neurosurgery
+       comp4: Very dynamic, rigorous, kind.
+       contentAcceuil1: ChablaHEALTH a startUp that aims to be revolutionary in the field of health.
+       contentAcceuil: ChablaHEALTH a well-thought-out Startup whose sole goal is rapid patient care without wasting time in the ranks of the fund.
+       contentAcceuil2: Welcome to ChablaHEALTH
+       pourquoi: Why Choose ChablaHealth?
+       lire: Learn More
+       service1: ChablaHEALTH provides you with a fast payment system for healthcare costs in hospitals available.
+       service2: ChablaHEALTH allows you to locate a preferred hospital based on the address.
+       service3: ChablaHEALTH has huge surprises in store for you in the upcoming versions
+       serviceT1: Quick care
+       serviceT2: Find nearby hospitals
+       serviceT3: Upcoming updates
+       sousT: ChablaHEALTH Features
+       sousC: ChablaHEALTH a network of hospitals distinguished by the following golden characteristics
+       sousT1: Doctors
+       sousC1: Availability of contacts from the best doctors in the world for rapid support.
+       sousT2: Follow-ups
+       sousC2: Availability of remote patient follow-ups after treatments
+       sousT3: Assistance
+       sousC3: Availability of rapid assistance in the event of a problem with the startUP
+       docteur: Doctors
+       labo: Departments
+       depart: Research Labs
+       recomp: Awards
        titleA: List of available hospitals
        histo: User history
        nameA: Name

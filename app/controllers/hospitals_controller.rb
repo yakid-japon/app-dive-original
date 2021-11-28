@@ -5,7 +5,7 @@ class HospitalsController < ApplicationController
   def index
     @hospitals = Hospital.search(params[:search])
 
-    @comments = Comment.all.page(params[:page]).per(3)
+   
   end
 
   def search
@@ -15,6 +15,7 @@ class HospitalsController < ApplicationController
   # GET /hospitals/1 or /hospitals/1.json
   def show
     @payment = Payment.new
+    @comments = Comment.all
   end
 
   # GET /hospitals/new

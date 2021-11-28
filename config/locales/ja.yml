@@ -211,11 +211,44 @@ ja:
       avis: 意見
       par: 旅
       date: 日付
-      contentAcceuil1: Chabla healthGATEは、ファンドのランクで時間を無駄にすることなく迅速な患者ケアを唯一の目標とする、よく考えられたスタートアップです。
-      contentAcceuil2: ChablahealthGATEへようこそ
-      service1: Chabla healthGATEは、利用可能な病院の医療費の迅速な支払いシステムを提供します。
-      service2: Chabla healthGATEを使用すると、住所に基づいて希望する病院を見つけることができます。
-      service3: Chabla healthGATEは、今後のバージョンであなたのために大きな驚きを持っています
+      profess1: チーフドクター 
+      comp1: 非常にダイナミックで厳密です。
+      profess2: 麻酔科医
+      comp2: 非常にダイナミックで、厳格で、フレンドリーです。
+      profess3: 心臓病学
+      comp3: 速く、柔らかく、社交的。
+      profess4: 脳神経外科
+      gal: ギャラリー
+      galPre: startUPの設備の整った病院で撮影された患者ケアの写真をいくつか紹介します。
+      contact: コンタクト
+      local: 世界地図上の私たちの場所
+      presentation: プレゼンテーション：このプロジェクトが日の目を見るようになり、困っている人々に奉仕できることを本当に嬉しく思います。
+      comp4: 非常にダイナミックで、厳格で、親切です。
+      docteurA: ChablaHEALTHは、24時間体制で世界最高の医師を提供します
+      contentAcceuil1: ChablaHEALTHは、健康の分野で革命的であることを目指す新興企業です。
+      contentAcceuil: ChablaHEALTHは、ファンドのランクで時間を無駄にすることなく迅速な患者ケアを唯一の目標とする、よく考えられたスタートアップです。
+      contentAcceuil2: ChablaHEALTHへようこそ
+      pourquoi: ChablaHealthを選ぶ理由
+      lire: もっと詳しく知る
+      service1: ChablaHEALTHは、利用可能な病院の医療費の迅速な支払いシステムを提供します。
+      service2: ChablaHEALTHを使用すると、住所に基づいて希望する病院を見つけることができます。
+      service3: ChablaHEALTHは、今後のバージョンであなたのために大きな驚きを持っています
+      serviceT1: クイックケア
+      serviceT2: 近くの病院を探す
+      serviceT3: 今後のアップデート
+      sousT: ChablaHEALTHの機能
+      sousC: ChablaHEALTHは、次の黄金の特徴によって区別される病院のネットワークです。
+      sousT1: 医者
+      sousC1: 迅速なサポートのための世界最高の医師からの連絡先の可用性。
+      sousT2: フォローアップ
+      sousC2: 治療後の遠隔患者フォローアップの利用可能性
+      sousT3: 支援
+      sousC3: startUPで問題が発生した場合の迅速な支援の可用性
+      docteur: 医者
+      labo: 研究所
+      depart: 部門
+      recomp: 賞
+      hospis: 病院
       titleA: 利用可能な病院のリスト
       nameA: 名前
       histo: ユーザー履歴

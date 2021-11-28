@@ -219,15 +219,48 @@ fr:
     pm: pm
   views:
     messages:
-       contentAcceuil1: Chabla healthGATE une Startup bien pensée dont le seul objectif est une prise en charge rapide des patients sans perdre de temps dans les rangs de la caisse.
-       contentAcceuil2: Bienvenue à Chabla healthGATE
-       service1: Chabla healthGATE met à votre disposition un système de paiement rapide des frais de soins dans des hôpitaux disponible.
-       service2: Chabla healthGATE permet de localiser un hôpital de préferance en fontion de l'adresse.
-       service3: Chabla healthGATE Vous réserve d'énormes surprises dans les versions à venir
-       titleA: Les Liste des hopitaux disponibles
+       contentAcceuil1: ChablaHEALTH une startUp qui se veut révolutionnaire dans le domaine de la santé.
+       contentAcceuil: ChablaHEALTH une Startup bien pensée dont le seul objectif est une prise en charge rapide des patients sans perdre de temps dans les rangs de la caisse.
+       contentAcceuil2: Bienvenue à ChablaHEALTH
+       pourquoi: Pourquoi choisir ChablaHEALTH ?
+       presentation: Je suis vraiment heureux que ce projet ai vu le jour et qu'il puisse bien servir les personnes dans le besoins
+       lire: Apprendre encore plus
+       gal: Galerie
+       galPre: Nous vous présentons quelques photos de prises en soins des patients par des hôpitaux bien équipés de notre startUP.
+       contact: Contact
+       local: Notre localisation sur la carte du monde
+       service1: ChablaHEALTH met à votre disposition un système de paiement rapide des frais de soins dans des hôpitaux disponible.
+       service2: ChablaHEALTH permet de localiser un hôpital de préferance en fontion de l'adresse.
+       service3: ChablaHEALTH Vous réserve d'énormes surprises dans les versions à venir
+       serviceT1: Soins rapides
+       serviceT2: Recherche d'hôpitaux proches
+       serviceT3: Mises à jours prochaines
+       titleA: La Liste des hopitaux disponibles
+       sousT: ChablaHEALTH Caractéristiques
+       sousC: ChablaHEALTH un réseau d'hôpitaux se démarquant par des caractéristiques d'or suivantes
+       sousT1: Des Médecins
+       sousC1: Disponibilités des contacts de meilleurs médecins du monde pour une prise en charge rapide.
+       sousT2: Des Suivies
+       sousC2: Disponibilités des suivies de patients à distance après traitements
+       sousT3: Des Assistances
+       sousC3: Disponibilités d'assistances rapides en cas de problème sur la startUP
+       docteur: Médecins
+       docteurA: ChablaHEALTH met à votre disposition des meilleurs médecins du monde à votre écoute 24h/24h
+       labo: Laboratoires de recherche
+       depart: Départements
+       profess1: Médecin-chef
+       comp1: Très dynamique, rigoureux.
+       profess2: Anesthésiste
+       comp2: Très dynamique, rigoureuse, aimable.
+       profess3: Cardiologie
+       comp3: Rapide, tendre, sociable.
+       profess4: Neurochirurgienne
+       comp4: Très dynamique, rigoureuse, gentil.
+       recomp: Récompenses
        prest: Les Liste des prestations disponibles
        price: Prix
        hospi: Hôpital
+       hospis: Hôpitaux
        nameA: Nom
        adresseA: Adresse
        histo: Historique de l'utilisateur

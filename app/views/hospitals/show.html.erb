@@ -1,56 +1,124 @@
+
+
 <br/><br/>
-<section id="features" class="services-area pt-120">
+<br/><br/>
+<br/><br/>
+<div class="app-container">
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Hospi name:</strong>
-  <%= @hospital.hospi_name %>
-</p>
-
-<p>
-  <strong>Hospi adresse:</strong>
-  <%= @hospital.hospi_adresse %>
-</p>
-
-
-  <% if @hospital.prestations %>
-   <strong>  Nos Prestation </strong>
+<div class="app-content">
+  <div class="projects-section">
+    <div class="projects-section-header">
+      <p><%= @hospital.hospi_name %></p>
+      <p class="time"><%= @hospital.hospi_adresse %></p>
+    </div>
+    <div class="projects-section-line">
+      <div class="projects-status">
+        <div class="item-status">
+          <span class="status-number"><%= @hospital.prestations.count %></span>
+          <span class="status-type">Prestations</span>
+        </div>
+      </div>
+    </div>
+    <div class="project-boxes jsGridView">
+    <% if @hospital.prestations %>
     <% @hospital.prestations.each do |value| %>
-      <div style="border-radius:5px; box-shadow: 6px 6px 6px blue; ">
-        <ul>
-        <li style="color:green"><%= value.name_prest %></li>
-        <li style="color:red"><%= value.price %> FCFA</li>
-        <button id="pay-btn"
+      <div class="project-box-wrapper">
+        <div class="project-box" style="background-color:  #e9e7fd;;">
+          <div class="project-box-header">
+            <span><a href="../recu.webp" download="recu.webp">Demander un QR de paiement</a></span>
+            <div class="more-wrapper">
+              <button class="project-btn-more">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-more-vertical">
+                  <circle cx="12" cy="12" r="1" />
+                  <circle cx="12" cy="5" r="1" />
+                  <circle cx="12" cy="19" r="1" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="project-box-content-header">
+            <p class="box-content-header"><%= value.name_prest %></p>
+            <p class="box-content-subheader"><%= value.price %> FCFA</p>
+          </div>
+          <div class="box-progress-wrapper">
+            <p class="box-progress-header">Qualité</p>
+            <div class="box-progress-bar">
+              <span class="box-progress" style="width: 60%; background-color: #ff942e"></span>
+            </div>
+            <p class="box-progress-percentage">60%</p>
+          </div>
+          <div class="project-box-footer">
+            <div class="participants">
+              <img
+                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80"
+                alt="participant">
+              <img
+                src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTB8fG1hbnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
+                alt="participant">
+            </div>
+            <button id="pay-btn" class="days-left" style="color: #ff942e;"
           data-transaction-amount= <%= value.price %>
           data-transaction-description="Paiement de prestation">Payer </button>
-          <br/>
           <%= form_with(model: @payment, local: true ,url: payments_path ) do |form| %>
             <% if user_signed_in? %>
             <%= form.hidden_field :user_id, value: current_user.id %>
             <%end%>
             <%= form.hidden_field :prestation_id, value: value.id %>
-           <button type="submit">Valider la transaction</button> 
+           <button type="submit" class="days-left" style="color: blue;">Valider la transaction</button> 
           <%end%>
-          | 
-          <a href="../recu.webp" download="recu.webp">Demander un QR de paiement</a>
-        </ul>
+          </div>
+        </div>
       </div>
+      <%end%>
     <%end%>
-  <%end%>
-
-  
-<% if user_signed_in? %>
-    <% if current_user.role? %>
-      <%= link_to 'Edit Hospital', edit_hospital_path(@hospital) %> |
-    <%end%>
-<%end%>
-<section id="features" class="services-area pt-120">
-
-<%= link_to 'Back', hospitals_path %>
+    </div>
+    
+  </div>
+  <div class="messages-section">
+    <button class="messages-close">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="feather feather-x-circle">
+        <circle cx="12" cy="12" r="10" />
+        <line x1="15" y1="9" x2="9" y2="15" />
+        <line x1="9" y1="9" x2="15" y2="15" />
+      </svg>
+    </button>
+    <div class="projects-section-header">
+      <p>Commentaires</p>
+    </div>
+    <div class="messages">
+    <% @hospital.prestations.each do |value| %>
+      <% value.comments.each do |comment| 
+        user= User.find(comment.user_id)%>
+        <div class="message-box">
+          <img
+            src="/assets/img/pro.png"
+            alt="profile image">
+          <div class="message-content">
+            <div class="message-header">
+              <div class="name"><%= user.name %></div>
+            </div>
+            <p class="message-line">
+             <%= comment.opinion %>
+            </p>
+            <p class="message-line time">
+            <%= comment.created_at %>
+            </p>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+    </div>
+  </div>
+</div>
+</div>
 
 <script type="text/javascript">
    FedaPay.init('#pay-btn', { public_key: 'pk_live_4Wbtx5-rDoIQMhe2aVb4ZxmE' });
 </script>
 
-<script src="../sample.js"></script>
+
 
