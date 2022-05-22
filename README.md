@@ -3,7 +3,7 @@
 ## Development Language
 
 - Ruby 2.6.5
-- Rails 5.2.6
+- Rails 5.2.7
 
 Things you may want to cover:
 
@@ -21,7 +21,7 @@ Things you may want to cover:
 ## Execution Procedure
 
 ```bash
-$ git clone https://github.com/jean-Baptiste2020/dive-original-app.git
+$ git clone https://github.com/yakid-japon/app-dive.git
 $ cd dive-original-app
 $ bundle install
 $ rails db:create
@@ -48,18 +48,17 @@ https://docs.google.com/spreadsheets/d/1Zze-SVzioNiTsf0eVvzX5VmFg_IVhuzl74ifbvyF
 
 ![ER Diagram](https://user-images.githubusercontent.com/65257248/139020144-8bc58e11-2b01-4822-ac79-29ff5743a2b2.PNG)
 
-https://cacoo.com/diagrams/pbi9JPXqpxzQaSq3/F2479
 
 ## Screen Transition Diagram
 
 ![Transition Diagram](https://user-images.githubusercontent.com/65257248/138964638-bd91cd6b-8ef6-4b53-a6d1-5ee92944df92.PNG)
 
-https://cacoo.com/diagrams/pbi9JPXqpxzQaSq3/CE008
 
 
 ## Wireframe
 
 ![Wireframe](https://user-images.githubusercontent.com/65257248/138964731-3f5745de-ef7b-4568-8d81-45ce4f305cac.PNG)
 
-https://cacoo.com/diagrams/pbi9JPXqpxzQaSq3/7D2EE
+https://cacoo.com/diagrams/l3OOw4859JM763hg/D8DF2
+
 
