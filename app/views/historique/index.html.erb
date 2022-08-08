@@ -20,52 +20,50 @@
       </div>
     </div>
 
-<% @payments.each do |value| 
-        pay= Prestation.find(value.prestation_id) 
-        host = pay.hospital%>
-    <div class="rowJ">
-      <div class="cellJ" data-title="Username">
-      <%= host.hospi_name %> <br/> <br/>
-      <p style="color: green;"><%= pay.name_prest%> <p/>
-      </div>
-      <div class="cellJ" data-title="Password">
-      <%= host.created_at %>
-      </div>
-      <div class="cellJ" data-title="Active">
-      <button data-toggle="modal" data-target="#formulaire" class="btn btn-primary">Commentaire</button>
-      
-      <div class="modal fade" id="formulaire">
-      <div class="modal-dialog">
-          <div class="modal-content">
-              <div class="modal-header">
-                  <h4 class="modal-title">Votre avis sur la prestation :</h4>              
-                  <button type="button" class="close" data-dismiss="modal">
-                  <span>&times;</span>
-                  </button>
-              </div>
-              <div class="modal-body row">
-                  <%= form_with(model: @comment, local: true ,url: comments_path ) do |form| %>
-                      <div class="form-group">
-                          <%= form.label :opinion, for: "comment", class: "form-control-label" %>
-                          <%= form.text_area :opinion, class: "form-control", id: "comment", placeholder: "Votre Commentaire" %>
-                      </div>
-                          <%= form.hidden_field :user_id, value: current_user.id %>
-                          <%= form.hidden_field :user_id, value: current_user.id %>
-                          <%= form.hidden_field :prestation_id, value: value.prestation_id %>
-                  <button type="submit">Point de vue</button> 
-                  <%end%>
-              </div>
-          </div>
-      </div>
-  </div>
-      
-      
-      </div>
+    <% @payments.each do |value| 
+            pay= Prestation.find(value.prestation_id) 
+            host = pay.hospital%>
+        <div class="rowJ">
+        <div class="cellJ" data-title="Username">
+        <%= host.hospi_name %> <br/> <br/>
+        <p style="color: green;"><%= pay.name_prest%> <p/>
+        </div>
+        <div class="cellJ" data-title="Password">
+        <%= host.created_at %>
+        </div>
+        <div class="cellJ" data-title="Active">
+        <button data-toggle="modal" data-target="#formulaire" class="btn btn-primary">Commentaire</button>
+        
+        <div class="modal fade" id="formulaire">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Votre avis sur la prestation :</h4>              
+                    <button type="button" class="close" data-dismiss="modal">
+                    <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body row">
+                    <%= form_with(model: @comment, local: true ,url: comments_path ) do |form| %>
+                        <div class="form-group">
+                            <%= form.label :opinion, for: "comment", class: "form-control-label" %>
+                            <%= form.text_area :opinion, class: "form-control", id: "comment", placeholder: "Votre Commentaire" %>
+                        </div>
+                            <%= form.hidden_field :user_id, value: current_user.id %>
+                            <%= form.hidden_field :user_id, value: current_user.id %>
+                            <%= form.hidden_field :prestation_id, value: value.prestation_id %>
+                    <button type="submit">Point de vue</button> 
+                    <%end%>
+                </div>
+            </div>
+        </div>
     </div>
-<%end%>
-
-
-  </div>
+        
+        
+        </div>
+        </div>
+    <%end%>
+    </div>
 
 </div>
 

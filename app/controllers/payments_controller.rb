@@ -1,6 +1,6 @@
 class PaymentsController < ApplicationController
-    def create
 
+    def create
         if user_signed_in?
           @payment = Payment.new(payment_params)
           if @payment.save
@@ -11,9 +11,9 @@ class PaymentsController < ApplicationController
         end
     end
 
-private
-
+  private
     def payment_params
         params.require(:payment).permit(:user_id, :prestation_id)
     end
+
 end

@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+
     def create
       if user_signed_in?
           @comment = Comment.new(comment_params)
@@ -10,9 +11,9 @@ class CommentsController < ApplicationController
       end
     end
 
-private
-
-    def comment_params
-        params.require(:comment).permit(:user_id, :prestation_id, :opinion)
-    end
+  private
+      def comment_params
+          params.require(:comment).permit(:user_id, :prestation_id, :opinion)
+      end
+      
 end
