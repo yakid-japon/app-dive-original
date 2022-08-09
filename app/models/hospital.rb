@@ -1,6 +1,6 @@
 class Hospital < ApplicationRecord
     has_many :prestations, dependent: :destroy
-    validates :hospi_name, , uniqueness: { scope: :hospi_name }, presence:true
+    validates :hospi_name, presence:true
     validates :hospi_adresse, presence:true
     def self.search(search)
         if search
